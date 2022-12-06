@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.name{
+  color: #73AD21;
+}
+.form{
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  
+}
+button{
+  background-color: #73AD21;
+}
