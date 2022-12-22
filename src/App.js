@@ -5,8 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home  from './components/home';
-import Order from './components/services/services/order';
+import Order from './order';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -50,20 +49,26 @@ function Form(){
 
   return(
     <>
-      
+      <div id='background'>
         <div id='User'>
           <h3>Order ID:434.95451332890076</h3>
-          <h3>username:${username}</h3>
+          <h3>username:{username}</h3>
         </div>
         
         <form className='form'>
         <input type='text' placeholder='Username ' value={username} onChange = {e => setusername(e.target.value)} /> 
-        <button  onClick={()=> navigate('/Order')}>Start my order</button>
-
-      </form>
+        <button className='ord' onClick={()=> navigate('/Order')}>Start my order</button>
+        </form>
+      </div>
     </>
   )
 
+}
+function Prices(price){
+  
+  return(
+    console.log(19)
+  )
 }
 
 

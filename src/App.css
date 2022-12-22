@@ -38,12 +38,15 @@
 }
 .name{
   color: #73AD21;
+  font-style:oblique;
+  color: aliceblue;
 }
 .form{
     margin: auto;
     width: 60%;
     border: 2px solid #73AD21;
     padding: 10px;
+    border-radius: 15px;
   
 }
 #User{
@@ -51,21 +54,53 @@
   width: 60%;
   border: 2px solid #73AD21;
   padding: 10px;
+  border-radius: 15px;
 }
 #Order{
   
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  text-align: center;
-  font-size:x-large;
+  margin: auto;
+  width: 60%;
+  border: 2px solid #73AD21;
+  padding: 10px;
+  border-radius: 15px;
 
 }
-button{
-  background-color: #73AD21;
-  margin-left: auto;
-  margin-right: auto;
-
+ord{
+  width: 50%;
+  border-radius: 15px;
+}
+body{
+  background-color: #9fd142;
+  color: white;
+}
+.button{
+  width: 50%;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 15px;
+}
+.dessert{
+  width: 25%;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 15px;
+}
+.boisson{
+  width: 25%;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 15px;
+}
+#invoice{
+  margin: auto;
+  width: 60%;
+  border: 2px solid #73AD21;
+  padding: 10px;
+  border-radius: 15px;
 }
