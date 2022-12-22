@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
@@ -64,12 +63,10 @@ function Form(){
   )
 
 }
-function Prices(price){
-  
-  return(
-    console.log(19)
-  )
+function displayPrice(price) {
+  return price;
 }
-
+var totalPrice = displayPrice(0.99);
+console.log(totalPrice)
 
 export default App;
