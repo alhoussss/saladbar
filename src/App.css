@@ -104,3 +104,10 @@ body{
   padding: 10px;
   border-radius: 15px;
 }
+#ingredients{
+  margin: auto;
+  width: 60%;
+  border: 2px solid #73AD21;
+  padding: 10px;
+  border-radius: 15px;
+}
