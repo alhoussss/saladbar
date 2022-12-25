@@ -1,32 +1,70 @@
 import React from "react";
 import "./App.css";
 import { useState } from "react";
-import ingrédients from "./ingrédients.json";
+import ingredients from "./ingredients.json";
 
 
-function Ingredients(props) {
-    const id = props.id;
-    const [count, setCount] = useState(0);
+function getProperty(object, property) {
+  
+    return parseInt(object[property]) ; // on retourne la valeur de la propriété
+ 
+}
 
+function Ingredients() {
+  const [count, setCount] = useState(0)
+  const [cart, setCart] = useState([]);
+  const removeFromCart = index => {
+    setCart(cart.filter((_, i) => i !== index));
+  }
+  
+  const addToCart = ingredient => {
+    setCart([...cart, ingredient]);
+  }
+  
 
   return (
     <>
     <div id="ingredients">    
         <div >
-          <h2>{ingrédients && ingrédients[id].title}</h2>
+          <h2>{ingredients && ingredients[0].title}</h2>
           <h3>Ingredients</h3>
-          <p>{ingrédients && ingrédients[id].salade_deux}</p>
-          <img src={ingrédients && ingrédients[id].photo} alt="Salade Image" />
+          <p>{ingredients && ingredients[0].ingredients}</p>
+          <img src={ingredients && ingredients[0].photo} alt="Salade Image" />
         </div>
     </div>
       <div id="Order">
-        <button className="button" onClick={() => setCount(count + 5)}>Commander</button>
+      <h3>Ajoutez des ingredients supplementaire:</h3>
+      <button className="ingre" onClick={() => {addToCart(ingredients[0]);setCount(count + parseInt(ingredients[0].Prix))}}>carottes râpées</button>
+      <button className="ingre" onClick={() => addToCart(ingredients[0])}>tomates</button>
+      <button className="ingre" onClick={() => addToCart(ingredients[0])}>maïs</button>
+      <button className="ingre" onClick={() => addToCart(ingredients[0])}>vinaigrette</button>
       </div>
+
+      <div id="Order">
+        <h3>Ingredients supplementaire:</h3>
+        {cart.map((ingredient, index) => (
+          <div key={ingredient.id}>
+            <p>{ ingredient["une"][0]["element"]+" "+ingredients[0].Prix} <button className="delete" onClick={() => removeFromCart(index)}>Supprimer</button></p>
+      </div>
+  ))}
+</div>
+
       <div id="invoice">
         <h3>Montant: {count}</h3>
       </div>
     </>
   );
 }
-
+/*
+function Price()
+const [count, setCount] = useState(0);
+{
+return(
+  <>
+    <div id="Order">
+        <button className="button" onClick={() => setCount(count + getProperty(ingredients,'Prix'))}>Commander</button>
+      </div>
+  </>
+)
+} */
 export default Ingredients;

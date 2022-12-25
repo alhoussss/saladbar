@@ -1,6 +1,11 @@
 [{
     "title":"Assiettes de crudité",
-    "salade_une": "Carottes râpées, tomates, maïs, vinaigrette.",
+    "Prix":"180",
+    "ingredients":"Carottes râpées,tomates,maïs,vinaigrette",
+    "une": [{"element":"Carottes râpées"},{}],
+    "deux":{"tomates":"1.80"},
+    "trois":"maïs",
+    "quatre":"vinaigrette",
     "photo":"https://monavislerendgratuit.com/media/com_avis/medias/image/large/t_20750_527063_1546967038_97.jpg"
 },
 {

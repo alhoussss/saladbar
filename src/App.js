@@ -6,7 +6,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { useNavigate } from 'react-router-dom';
 import Ingredients from './ingre.js';
-import { Link } from "react-router-dom";
+
 
 
 
@@ -27,7 +27,6 @@ function App() {
       <Route path='/' element={<Form/>}/>
       <Route path="/Order" element={<Order/>} />
       <Route path='/Order/Ingredients' element={<Ingredients/>}/>
-      <Route path='/Order/Ingredients/:id' component={Ingredients}/>
     </Routes>
   
     </>
@@ -76,14 +75,10 @@ function Order(){
           </div>
           <div id="Order">
               <form >
-                <Link to="/Order/Ingredients/0">
-                  <button className="button" >Assiettes de crudité</button>
-                </Link>
+                <button className="button" onClick={() => navigate('/Order/Ingredients')}>Assiettes de crudité</button>
                 <button className="boisson" onClick={() => navigate('/Order/Ingredients')}>Expresso</button>
                 <button className="dessert" onClick={() => navigate('/Order/Ingredients')}> Macaron</button><br/>
-                <Link to="/Order/Ingredients/1">
-                  <button className="button">Méli-mélo de crudités</button>
-                </Link>
+                <button className="button" onClick={() => navigate('/Order/Ingredients')}>Méli-mélo de crudités</button>
                 <button className="boisson" onClick={() => navigate('/Order/Ingredients')}>Chocolat</button>
                 <button className="dessert" onClick={() => navigate('/Order/Ingredients')}>Île flottante</button><br/>
                 <button className="button" onClick={() => navigate('/Order/Ingredients')}>Panaché de crudités</button>
