@@ -1,0 +1,33 @@
+/*
+Our Client is asking us to build a web app so that their customers can easily order a salad at their new SaladBar with all the ingredients they choose. It has to be clear and easy to use.
+
+
+
+Here are the client’s specs : 
+
+
+
+As a customer, I want access to a web app so that I can easily build my salad order.                     OK !
+
+As a customer, I want to fill my name in a form so that I can identify my order.                       NOT YET !
+
+As a customer, I want to see all the available ingredients so that I can easily and carefully build my own salad.          OK !
+
+As a customer, I want to be able to see each ingredient’s price, so that I can choose wisely.                             OK !
+
+As a customer, I want to be able to be able to reset my order so that I can start over in case I change my mind.         NOT YET !
+
+As a customer, I want to see what ingredients I have chosen to be in my salad and the total cost, so that I can easily remember the contents I have already chosen.   OK !
+
+As a customer, I want to be able to see each ingredient’s price and the total price of my salad, so that I can know in advance how mush I will need to pay.          OK !
+
+
+
+Bonus : 
+
+
+
+As a customer, I want to be able to remove an ingredient from my salad, so that I can replace it.      OK !
+
+As a customer, I want to see a recap of my order page so that I can finalize my order.                NOT YET !
+*/

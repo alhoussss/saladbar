@@ -1,6 +1,7 @@
 [{
     "title":"Assiettes de crudité",
-    "Prix":"180",
+    "Prix_salade":14,
+    "Prix_ingredients":"1",
     "ingredients":"Carottes râpées,tomates,maïs,vinaigrette",
     "une": [{"element":"Carottes râpées"},{}],
     "deux":{"tomates":"1.80"},

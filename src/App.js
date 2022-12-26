@@ -1,19 +1,13 @@
 import './App.css';
-import { useEffect, useState } from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
+import { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import React from "react";
-import ReactDOM from "react-dom/client";
 import { useNavigate } from 'react-router-dom';
 import Ingredients from './ingre.js';
 
 
-
-
-
 function App() {
-  const [username, setusername] = useState("")
-
+  
   return (
     <>
 
@@ -22,7 +16,6 @@ function App() {
         <h1 className='name'> SaladBar </h1>
       </header>
     </div>
-    {username ? <Username username = {Username} /> : null }
     <Routes>
       <Route path='/' element={<Form/>}/>
       <Route path="/Order" element={<Order/>} />
@@ -33,19 +26,13 @@ function App() {
 
   );
 }
-function Username(props){
-  const {text} = props.username
-  return(
-    <>
-      <p>{text}</p>
-    </>
-  );
-  
 
-}
 function Form(){
 
   const [username, setusername] = useState("")
+  const handlechange = (event) => {
+    setusername(event.target.value);
+  }
   let navigate = useNavigate();
   return(
     <>
@@ -56,8 +43,8 @@ function Form(){
         </div>
         
         <form className='form'>
-        <input type='text' placeholder='Username ' value={username} onChange = {e => setusername(e.target.value)} /> 
-        <button className='ord' onClick={()=> navigate('/Order')}>Start my order</button>
+        <input type='text' placeholder='Username ' value={username} onChange = {handlechange} /> 
+        <button className='ord' onClick= {()=> navigate('/Order')}>Start my order</button>
         </form>
       </div>
     </>
@@ -65,13 +52,16 @@ function Form(){
 
 }
 
-function Order(){
+
+
+function Order(handlechange){
+  const { username } = handlechange;
   let navigate = useNavigate();
   return(
       <>
           <div id="User">
           <h3>Order ID:434.95451332890076</h3>
-          <h3>username:</h3>
+          <h3>username:{username}</h3>
           </div>
           <div id="Order">
               <form >
