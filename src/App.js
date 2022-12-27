@@ -4,14 +4,13 @@ import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 import Ingredients from './ingre.js';
+import Recap from "./recap.js";
 
 
 function App() {
-  
   return (
     <>
-
-          <div className="App">
+      <div className="App">
       <header>
         <h1 className='name'> SaladBar </h1>
       </header>
@@ -20,6 +19,7 @@ function App() {
       <Route path='/' element={<Form/>}/>
       <Route path="/Order" element={<Order/>} />
       <Route path='/Order/Ingredients' element={<Ingredients/>}/>
+      <Route path='/Order/Ingredients/Recap' element={<Recap/>}/>;
     </Routes>
   
     </>
@@ -60,8 +60,8 @@ function Order(handlechange){
   return(
       <>
           <div id="User">
-          <h3>Order ID:434.95451332890076</h3>
-          <h3>username:{username}</h3>
+            <h3>Order ID:434.95451332890076</h3>
+            <h3>username:{username}</h3>
           </div>
           <div id="Order">
               <form >

@@ -1,18 +1,16 @@
-[{
-    "title":"Assiettes de crudité",
-    "Prix_salade":14,
-    "Prix_ingredients":"1",
-    "ingredients":"Carottes râpées,tomates,maïs,vinaigrette",
-    "une": [{"element":"Carottes râpées"},{}],
-    "deux":{"tomates":"1.80"},
-    "trois":"maïs",
-    "quatre":"vinaigrette",
-    "photo":"https://monavislerendgratuit.com/media/com_avis/medias/image/large/t_20750_527063_1546967038_97.jpg"
-},
 {
-    "title":"Méli-mélo de crudités",
-    "salade_deux":"Concombres, tomates, maïs, vinaigrette",
+    "title": "Assiettes de crudités",
+    "Prix_salade":13,
+    "ingredients": ["Carottes râpées","tomates","maïs","vinaigrette"],
+    "Prix_ingre": {
+      "Carottes_râpées": 1,
+      "tomates": 1,
+      "maïs": 1,
+      "vinaigrette": 1
+    },
     "photo":"https://media3.woopic.com/api/v1/images/219%2Fwebedia-recettes%2F819%2Fb88%2F0e89431530e1d20e1d579fcab0%2Foeufs-mimosa-et-meli-melo-de-crudites%7C379959-oeufs-mimosa-et-crudites-orig-1.jpg?format=420x&facedetect=1&quality=85"
-}
+  }
+  
 
-]
+
+
