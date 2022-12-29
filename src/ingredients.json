@@ -1,7 +1,8 @@
 [{
     "title": "Assiettes de crudités",
     "Prix_salade":13,
-    "ingredients": ["Carottes râpées","tomates","maïs","vinaigrette"],
+    "ingredients": ["Carottes râpées,tomates,maïs,vinaigrette"],
+    "ingredient": ["Carottes râpées","tomates","maïs","vinaigrette"],
     "Prix_ingre": {
       "Carottes_râpées": 1,
       "tomates": 1,

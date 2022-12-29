@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { useState } from 'react';
-import Ingredients from './ingre.js';
+import Ingredients from './S_une.js';
 import ingredients from "./ingredients.json";
 
 function Recap(){

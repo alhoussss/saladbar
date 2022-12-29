@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import Ingredients from './ingre.js';
+import Ingredients from './S_une.js';
+import S_deux from "./S_deux";
 import Recap from "./recap.js";
 
 
@@ -68,7 +69,7 @@ function Order(handlechange){
                 <button className="button" onClick={() => navigate('/Order/Ingredients')}>Assiettes de crudité</button>
                 <button className="boisson" onClick={() => navigate('/Order/Ingredients')}>Expresso</button>
                 <button className="dessert" onClick={() => navigate('/Order/Ingredients')}> Macaron</button><br/>
-                <button className="button" onClick={() => navigate('/Order/Ingredients')}>Méli-mélo de crudités</button>
+                <button className="button" onClick={() => navigate('/Order/S_deux')}>Méli-mélo de crudités</button>
                 <button className="boisson" onClick={() => navigate('/Order/Ingredients')}>Chocolat</button>
                 <button className="dessert" onClick={() => navigate('/Order/Ingredients')}>Île flottante</button><br/>
                 <button className="button" onClick={() => navigate('/Order/Ingredients')}>Panaché de crudités</button>
