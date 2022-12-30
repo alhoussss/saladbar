@@ -1,4 +1,5 @@
 [{
+    "id":1,
     "title": "Assiettes de crudités",
     "Prix_salade":13,
     "ingredients": ["Carottes râpées,tomates,maïs,vinaigrette"],
@@ -12,6 +13,7 @@
     "photo":"https://media3.woopic.com/api/v1/images/219%2Fwebedia-recettes%2F819%2Fb88%2F0e89431530e1d20e1d579fcab0%2Foeufs-mimosa-et-meli-melo-de-crudites%7C379959-oeufs-mimosa-et-crudites-orig-1.jpg?format=420x&facedetect=1&quality=85"
   },
   {
+    "id":2,
     "title": "Méli-mélo de crudités",
     "Prix_salade":12,
     "ingredients": ["Concombres, tomates, maïs, vinaigrette"],
@@ -24,6 +26,7 @@
     "photo":"https://www.tatiemaryse.com/wp-content/uploads/2018/12/me%CC%81li-me%CC%81lo-crudite%CC%81s.jpg_"
   },
   {
+    "id":3,
     "title": "Panaché de crudités",
     "Prix_salade":15,
     "ingredients": ["Tomates, concombres, carottes râpées, vinaigrette"],
@@ -36,6 +39,7 @@
     "photo":"https://cache.marieclaire.fr/data/photo/w1000_c17/cuisine/15z/saladeradissaumon.jpg_"
   },
   {
+    "id":4,
     "title": "Crudités Bulgare",
     "Prix_salade":10,
     "ingredients": ["Carottes, céleri branche, courgettes, sauce bulgare"],

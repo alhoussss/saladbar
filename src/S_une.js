@@ -9,15 +9,21 @@ import {useNavigate } from "react-router-dom";
 function Ingredients() {
   const [count, setCount] = useState(ingredients[0].Prix_salade)
   const [cart, setCart] = useState([]);
+  // fonction pour naviguer vers une autre route
   let navigate = useNavigate()
+  // fonction pour retirer un ingrédient du panier
   const removeFromCart = index => {
     setCart(cart.filter((_, i) => i !== index));
   }
-  
+  // fonction pour ajouter un ingrédient au panier
   const addToCart = ingredient => {
     setCart([...cart, ingredient]);
   }
-  
+  // fonction pour gérer le clic sur un bouton
+  const handleClick = event => {
+    console.log(event.target.name);
+    // autres actions
+  }
 
   return (
     <>
@@ -31,17 +37,17 @@ function Ingredients() {
     </div>
       <div id="Order">
       <h3>Ajoutez des ingredients supplementaire:</h3>
-      <button className="ingre" onClick={() => {addToCart(ingredients[0]["ingredient"][0]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>carottes râpées</button>
-      <button className="ingre" onClick={() => {addToCart(ingredients[0]["ingredient"][1]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>tomates</button>
-      <button className="ingre" onClick={() => {addToCart(ingredients[0]["ingredient"][2]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>maïs</button>
-      <button className="ingre" onClick={() => {addToCart(ingredients[0]["ingredient"][3]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>vinaigrette</button>
+      <button className="ingre" name="comcombre" onClick={() => {addToCart(ingredients[0]["ingredient"][0]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>comcombre</button>
+      <button className="ingre" name="tomates" onClick={() => {addToCart(ingredients[0]["ingredient"][1]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>tomates</button>
+      <button className="ingre" name="maïs" onClick={() => {addToCart(ingredients[0]["ingredient"][2]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>maïs</button>
+      <button className="ingre" name="vinaigrette" onClick={() => {addToCart(ingredients[0]["ingredient"][3]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>vinaigrette</button>
       </div>
 
       <div id="Order">
         <h3>Ingredients supplementaire:</h3>
         {cart.map((ingredient, index) => (
           <div key={ingredient.id}>
-            <p>{ ingredients[0]["ingredient"][1]+" "+ingredients[0]["Prix_ingre"]["tomates"]}€ <button className="delete" onClick={() =>{removeFromCart(index);setCount(count - ingredients["Prix_ingre"]["tomates"] )}}>Supprimer</button></p>
+            <p>{ ingredients[0]["ingredient"][1]+" "+ingredients[0]["Prix_ingre"]["tomates"]}€ <button className="delete" onClick={() =>{removeFromCart(index);setCount(count - ingredients[0]["Prix_ingre"]["tomates"] )}}>Supprimer</button></p>
       </div>
   ))}
 </div>
