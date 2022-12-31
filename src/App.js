@@ -4,8 +4,11 @@ import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 import Ingredients from './S_une.js';
-import S_deux from "./S_deux";
+import reactbootstrap from "./reactbootstrap";
 import Recap from "./recap.js";
+import { Button } from 'react-bootstrap';
+import AdditionalContentExample from './reactbootstrap';
+
 
 
 function App() {
@@ -45,7 +48,7 @@ function Form(){
         
         <form className='form'>
         <input type='text' placeholder='Username ' value={username} onChange = {handlechange} /> 
-        <button className='ord' onClick= {()=> navigate('/Order')}>Start my order</button>
+        <Button variant="success" className='ord' size="lg" onClick= {()=> navigate('/Order')} enable>Start my order</Button>
         </form>
       </div>
     </>

@@ -3,6 +3,8 @@ import "./App.css";
 import { useState } from "react";
 import ingredients from "./ingredients.json";
 import {useNavigate } from "react-router-dom";
+import { VariationsExample } from './reactbootstrap';
+
 
 
 
@@ -47,7 +49,8 @@ function Ingredients() {
         <h3>Ingredients supplementaire:</h3>
         {cart.map((ingredient, index) => (
           <div key={ingredient.id}>
-            <p>{ ingredients[0]["ingredient"][1]+" "+ingredients[0]["Prix_ingre"]["tomates"]}€ <button className="delete" onClick={() =>{removeFromCart(index);setCount(count - ingredients[0]["Prix_ingre"]["tomates"] )}}>Supprimer</button></p>
+            <VariationsExample bg="primary">Primary</VariationsExample>
+            <p>{ ingredients[0]["ingredient"][3]+" "+ingredients[0]["Prix_ingre"]["tomates"]}€ <button className="delete" onClick={() =>{removeFromCart(index);setCount(count - ingredients[0]["Prix_ingre"]["tomates"] )}}>Supprimer</button></p>
       </div>
   ))}
 </div>
