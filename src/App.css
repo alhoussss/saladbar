@@ -24,6 +24,12 @@
   color: white;
 }
 
+.bg-green{
+  position:static;
+  bottom: 0;
+  width: 100%;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -44,7 +50,7 @@
 .form{
     margin: auto;
     width: 60%;
-    border: 2px solid #73AD21;
+    border:  #73AD21;
     padding: 10px;
     border-radius: 15px;
   
@@ -53,6 +59,13 @@
   margin: auto;
   width: 60%;
   border: 2px solid #73AD21;
+  padding: 10px;
+  border-radius: 15px;
+}
+#Menu{
+  margin: auto;
+  width: 100%;
+  border: 2px #73AD21;
   padding: 10px;
   border-radius: 15px;
 }
@@ -77,10 +90,6 @@
   width: 20%;
   border: 2px solid #73AD21;
   padding: 5px;
-  border-radius: 15px;
-}
-ord{
-  width: 50%;
   border-radius: 15px;
 }
 body{
@@ -127,7 +136,7 @@ body{
 }
 .order{
   margin-left: auto;
-  width: 50%;
+  width: 33%;
   border: 2px solid #73AD21;
   padding: 10px;
   border-radius: 15px;

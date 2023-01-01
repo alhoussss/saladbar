@@ -3,15 +3,17 @@ import { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import Ingredients from './S_une.js';
-import reactbootstrap from "./reactbootstrap";
+import Ingredients from './Order.js';
 import Recap from "./recap.js";
-import { Button } from 'react-bootstrap';
-import AdditionalContentExample from './reactbootstrap';
-
+import CarouselFadeExample from './Reactbootstrap/reactbootstrap';
+import NavScrollExample from './Reactbootstrap/navbar';
+import CreateUser from './Reactbootstrap/User';
+import Footer from './Reactbootstrap/footer';
+import Button from 'react-bootstrap/Button';
 
 
 function App() {
+  let navigate = useNavigate();
   return (
     <>
       <div className="App">
@@ -21,9 +23,12 @@ function App() {
     </div>
     <Routes>
       <Route path='/' element={<Form/>}/>
+      <Route path='/CreateUser' element={<CreateUser/>}/>
       <Route path="/Order" element={<Order/>} />
-      <Route path='/Order/Ingredients' element={<Ingredients/>}/>
-      <Route path='/Order/Ingredients/Recap' element={<Recap/>}/>;
+      <Route path="/CreateUser/Order" element={<Order/>} />
+      <Route path='/CreateUser/Order/Ingredients' element={<Ingredients/>}/>
+      <Route path='/CreateUser/Order/Ingredients/Recap' element={<Recap/>}/>
+      
     </Routes>
   
     </>
@@ -33,24 +38,25 @@ function App() {
 
 function Form(){
 
-  const [username, setusername] = useState("")
-  const handlechange = (event) => {
-    setusername(event.target.value);
-  }
-  let navigate = useNavigate();
+ 
   return(
     <>
-      <div id='background'>
-        <div id='User'>
-          <h3>Order ID:434.95451332890076</h3>
-          <h3>username:{username}</h3>
+      <div>
+        
+        <NavScrollExample/>
+      </div>
+        <div >
+
+          <CarouselFadeExample/>
+
         </div>
         
-        <form className='form'>
-        <input type='text' placeholder='Username ' value={username} onChange = {handlechange} /> 
-        <Button variant="success" className='ord' size="lg" onClick= {()=> navigate('/Order')} enable>Start my order</Button>
-        </form>
-      </div>
+        <div id='footer'>
+
+          <Footer/>
+
+        </div>
+
     </>
   )
 
@@ -63,30 +69,27 @@ function Order(handlechange){
   let navigate = useNavigate();
   return(
       <>
-          <div id="User">
-            <h3>Order ID:434.95451332890076</h3>
-            <h3>username:{username}</h3>
-          </div>
+      <NavScrollExample/>
           <div id="Order">
               <form >
-                <button className="button" onClick={() => navigate('/Order/Ingredients')}>Assiettes de crudité</button>
-                <button className="boisson" onClick={() => navigate('/Order/Ingredients')}>Expresso</button>
-                <button className="dessert" onClick={() => navigate('/Order/Ingredients')}> Macaron</button><br/>
-                <button className="button" onClick={() => navigate('/Order/S_deux')}>Méli-mélo de crudités</button>
-                <button className="boisson" onClick={() => navigate('/Order/Ingredients')}>Chocolat</button>
-                <button className="dessert" onClick={() => navigate('/Order/Ingredients')}>Île flottante</button><br/>
-                <button className="button" onClick={() => navigate('/Order/Ingredients')}>Panaché de crudités</button>
-                <button className="boisson" onClick={() => navigate('/Order/Ingredients')}>Capuccino</button>
-                <button className="dessert" onClick={() => navigate('/Order/Ingredients')}>mille-feuille</button><br/>
-                <button className="button" onClick={() => navigate('/Order/Ingredients')}>Crudités Bulgare</button>
-                <button className="boisson" onClick={() => navigate('/Order/Ingredients')}>Ice-Thea</button>
-                <button className="dessert" onClick={() => navigate('/Order/Ingredients')}>Tarte au citron</button><br/>
-                <button className="button" onClick={() => navigate('/Order/Ingredients')}>Salade Arc-en-ciel</button>
-                <button className="boisson" onClick={() => navigate('/Order/Ingredients')}>Jus d'orange</button>
-                <button className="dessert" onClick={() => navigate('/Order/Ingredients')}>crème brûlée</button>
+                <Button variant="outline-success" className="button" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Assiettes de crudité</Button>
+                <Button variant="outline-success" className="boisson" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Expresso</Button>
+                <Button variant="outline-success" className="dessert" onClick={() => navigate('/CreateUser/Order/Ingredients')}> Macaron</Button><br/>
+                <Button variant="outline-success" className="button" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Méli-mélo de crudités</Button>
+                <Button variant="outline-success" className="boisson" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Chocolat</Button>
+                <Button variant="outline-success" className="dessert" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Île flottante</Button><br/>
+                <Button variant="outline-success" className="button" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Panaché de crudités</Button>
+                <Button variant="outline-success" className="boisson" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Capuccino</Button>
+                <Button variant="outline-success" className="dessert" onClick={() => navigate('/CreateUser/Order/Ingredients')}>mille-feuille</Button><br/>
+                <Button variant="outline-success" className="button" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Crudités Bulgare</Button>
+                <Button variant="outline-success" className="boisson" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Ice-Thea</Button>
+                <Button variant="outline-success" className="dessert" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Tarte au citron</Button><br/>
+                <Button variant="outline-success" className="button" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Salade Arc-en-ciel</Button>
+                <Button variant="outline-success" className="boisson" onClick={() => navigate('/CreateUser/Order/Ingredients')}>Jus d'orange</Button>
+                <Button variant="outline-success" className="dessert" onClick={() => navigate('/CreateUser/Order/Ingredients')}>crème brûlée</Button>
               </form>
           </div>
-          
+          <Footer/>
       </>
 
   );
