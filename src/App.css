@@ -12,7 +12,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+#nav{
+  margin-bottom: 100px;
+}
+#foot{
+  margin-bottom: 1000px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,8 +29,8 @@
   color: white;
 }
 
-.bg-green{
-  position:static;
+footer{
+  position:top;
   bottom: 0;
   width: 100%;
 }
@@ -77,6 +82,14 @@
   padding: 10px;
   border-radius: 15px;
 
+}
+#Card{
+  margin: auto;
+  width: 60%;
+  border: 2px solid #73AD21;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 100px;
 }
 .delete{
   margin: auto;

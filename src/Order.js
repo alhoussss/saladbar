@@ -9,9 +9,11 @@ import { Button } from "react-bootstrap";
 import { useEffect } from "react";
 
 
-function Ingredients() {
+function Order() {
   const [count, setCount] = useState(ingredients[0].Prix_salade)
   const [cart, setCart] = useState([]);
+  const [result, setResult] = useState('');
+
   // fonction pour naviguer vers une autre route
   let navigate = useNavigate()
   // fonction pour retirer un ingrédient du panier
@@ -23,9 +25,10 @@ function Ingredients() {
     setCart([...cart, ingredient]);
   }
   // fonction pour gérer le clic sur un bouton
-  const handleClick = event => {
-    console.log(event.target.name);
-  }
+  /*const handleClick = () => {
+    setResult(`${ingredients[0]["ingredient"][0]}; ${ingredients[0]["ingredient"][1]}; ${ingredients[0]["ingredient"][2]}; ${ingredients[0]["ingredient"][3]}`);
+  };
+  */
   // Reset ma liste
 function resetTodoList() {
   setCart([]);
@@ -33,15 +36,18 @@ function resetTodoList() {
 
   return (
     <>
-    <NavScrollExample/>
-    <div id="ingredients">    
+    <div id="nav">
+      <NavScrollExample/>
+    </div>
+    <div id="nav">
+      <div id="ingredients">    
         <div >
           <h2>{ingredients && ingredients[0].title}</h2>
           <h3>Ingredients</h3>
           <p>{ingredients && ingredients[0].ingredients}</p>
           <img src={ingredients && ingredients[0].photo} alt="Salade Image" />
         </div>
-    </div>
+      </div>
       <div id="Order">
       <h3>Ajoutez des ingredients supplementaire:</h3>
       <Button variant="outline-success" className="ingre" name="comcombre" onClick={() => {addToCart(ingredients[0]["ingredient"][0]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>comcombre</Button>
@@ -56,20 +62,21 @@ function resetTodoList() {
           <div key={ingredient.id}>
             <p>{ ingredients[0]["ingredient"][1]+" "+ingredients[0]["Prix_ingre"]["tomates"]}€ <Button variant="outline-success" className="delete" onClick={() =>{removeFromCart(index);setCount(count - ingredients[0]["Prix_ingre"]["tomates"] )}}>Supprimer</Button></p>
       </div>
-  ))}
-</div>
+        ))}
+      </div>
 
       <div id="invoice">
         <h3>Montant: {count}€</h3>
       </div>
       <div id="invoice">
-        <Button variant="outline-success" className="order" onClick={() => navigate('/CreateUser/Order')}> Poursuivre votre commande</Button>
+        <Button variant="outline-success" className="order" onClick={() => navigate('/CreateUser/MenuCard')}> Poursuivre votre commande</Button>
         <Button variant="outline-success" className="order" onClick={resetTodoList} > Reset</Button>
-        <Button variant="outline-success" className="order" onClick={() => navigate('/CreateUser/Order/Ingredients/Recap')}> Finaliser votre commande >></Button>
+        <Button variant="outline-success" className="order" onClick={() => navigate('/CreateUser/MenuCard/Order/Recap')}> Finaliser votre commande >></Button>
+      </div>
       </div>
         <Footer/>
     </>
   );
 }
 
-export default Ingredients;
+export default Order;

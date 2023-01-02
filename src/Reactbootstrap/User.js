@@ -23,13 +23,17 @@ const CreateUser = () => {
 
   return (
     <>
-    <NavScrollExample/>
+    <div id="nav">
+      <NavScrollExample/>
+    </div>
+    <div id="nav">
     <form onSubmit={handleSubmit} className='form'>
       <div className="form-group">
         <label htmlFor="name">Nom</label>
         <input
           type="text"
           className="form-control"
+          style={{ width: '60%' }}
           id="name"
           value={name}
           onChange={(event) => setName(event.target.value)}
@@ -40,6 +44,7 @@ const CreateUser = () => {
         <input
           type="text"
           className="form-control"
+          style={{ width: '60%' }}
           id="firstname"
           value={firstname}
           onChange={(event) => setFirstname(event.target.value)}
@@ -50,6 +55,7 @@ const CreateUser = () => {
         <input
           type="text"
           className="form-control"
+          style={{ width: '60%' }}
           id="phone"
           value={phone}
           onChange={(event) => setPhone(event.target.value)}
@@ -60,13 +66,15 @@ const CreateUser = () => {
         <input
           type="email"
           className="form-control"
+          style={{ width: '60%' }}
           id="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
         />
       </div>
-      <Button variant="outline-success" className='ord' onClick={() =>navigate('/CreateUser/Order')}>Start my order</Button>
+      <Button variant="outline-success" className='ord' onClick={() =>navigate('/CreateUser/MenuCard')}>Start my order</Button>
     </form>
+    </div>
     <Footer/>
     </>
   );

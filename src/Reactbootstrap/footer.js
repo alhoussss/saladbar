@@ -33,10 +33,10 @@ const Footer = () => (
       </Row>
       <hr className="my-4"/>
       <Row className="align-items-center justify-content-between py-4">
-        <Col sm={6}>
+        <Col sm={3}>
           <p className="text-white mb-0">Copyright &copy; {new Date().getFullYear()} Mon entreprise</p>
         </Col>
-        <Col sm={6}>
+        <Col sm={3}>
           <p className="text-white mb-0">Fait avec <i className="fas fa-heart text-danger"></i> par notre équipe</p>
         </Col>
       </Row>

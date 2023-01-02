@@ -40,7 +40,7 @@ function NavScrollExample() {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>'  '
-            <Button variant="outline-success" onClick={() =>navigate('/Order')}>Commander</Button>'  '
+            <Button variant="outline-success" onClick={() =>navigate('/MenuCard')}>Commander</Button>'  '
             <Button variant="outline-success" onClick={() =>navigate('/CreateUser')}>Connexion</Button>
           </Form>
         </Navbar.Collapse>
