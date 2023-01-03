@@ -9,6 +9,8 @@ import CreateUser from './Reactbootstrap/User';
 import Footer from './Reactbootstrap/footer';
 import Button from 'react-bootstrap/Button';
 import Order from './Order.js';
+import Carte from './Reactbootstrap/Carte';
+import MapContainer from './Reactbootstrap/map.js';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
     </div>
     <Routes>
       <Route path='/' element={<Form/>}/>
+      <Route path='/Livraison' element={<MapContainer/>}/>
+      <Route path='/Card' element={<Carte/>}/>
       <Route path='/CreateUser' element={<CreateUser/>}/>
       <Route path="/MenuCard" element={<MenuCard/>} />
       <Route path="/CreateUser/MenuCard" element={<MenuCard/>} />

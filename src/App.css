@@ -167,3 +167,18 @@ body{
 h1{
   text-align: center;
 }
+#menu{
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  vertical-align:middle;
+  text-align: center;
+}
+.pictures{
+  
+    width: 350px;
+    height: 300px;
+  
+  
+}
