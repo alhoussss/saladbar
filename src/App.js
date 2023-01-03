@@ -1,9 +1,7 @@
 import './App.css';
-import { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import Ingredients from './Order.js';
 import Recap from "./recap.js";
 import CarouselFadeExample from './Reactbootstrap/reactbootstrap';
 import NavScrollExample from './Reactbootstrap/navbar';
@@ -14,13 +12,9 @@ import Order from './Order.js';
 
 
 function App() {
-  let navigate = useNavigate();
   return (
     <>
       <div className="App">
-      <header>
-        <h1 className='name'> SaladBar </h1>
-      </header>
     </div>
     <Routes>
       <Route path='/' element={<Form/>}/>
@@ -28,7 +22,7 @@ function App() {
       <Route path="/MenuCard" element={<MenuCard/>} />
       <Route path="/CreateUser/MenuCard" element={<MenuCard/>} />
       <Route path='/CreateUser/MenuCard/Order' element={<Order/>}/>
-      <Route path='/CreateUser/Order/Ingredients/Recap' element={<Recap/>}/>
+      <Route path='/CreateUser/MenuCard/Order/Recap' element={<Recap/>}/>
       
     </Routes>
   
@@ -66,7 +60,6 @@ function Form(){
 
 
 function MenuCard(handlechange){
-  const { username } = handlechange;
   let navigate = useNavigate();
   return(
       <>

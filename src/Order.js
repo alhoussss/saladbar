@@ -6,13 +6,12 @@ import {useNavigate } from "react-router-dom";
 import NavScrollExample from "./Reactbootstrap/navbar";
 import Footer from "./Reactbootstrap/footer";
 import { Button } from "react-bootstrap";
-import { useEffect } from "react";
 
 
 function Order() {
   const [count, setCount] = useState(ingredients[0].Prix_salade)
   const [cart, setCart] = useState([]);
-  const [result, setResult] = useState('');
+  //const [result, setResult] = useState('');
 
   // fonction pour naviguer vers une autre route
   let navigate = useNavigate()
@@ -27,8 +26,8 @@ function Order() {
   // fonction pour gérer le clic sur un bouton
   /*const handleClick = () => {
     setResult(`${ingredients[0]["ingredient"][0]}; ${ingredients[0]["ingredient"][1]}; ${ingredients[0]["ingredient"][2]}; ${ingredients[0]["ingredient"][3]}`);
-  };
-  */
+  };*/
+  
   // Reset ma liste
 function resetTodoList() {
   setCart([]);
@@ -45,7 +44,7 @@ function resetTodoList() {
           <h2>{ingredients && ingredients[0].title}</h2>
           <h3>Ingredients</h3>
           <p>{ingredients && ingredients[0].ingredients}</p>
-          <img src={ingredients && ingredients[0].photo} alt="Salade Image" />
+          <img src={ingredients && ingredients[0].photo} alt="Salade" />
         </div>
       </div>
       <div id="Order">
@@ -60,7 +59,7 @@ function resetTodoList() {
         <h3>Ingredients supplementaire:</h3>
         {cart.map((ingredient, index) => (
           <div key={ingredient.id}>
-            <p>{ ingredients[0]["ingredient"][1]+" "+ingredients[0]["Prix_ingre"]["tomates"]}€ <Button variant="outline-success" className="delete" onClick={() =>{removeFromCart(index);setCount(count - ingredients[0]["Prix_ingre"]["tomates"] )}}>Supprimer</Button></p>
+            <p>{ ingredients[0]["ingredient"][1]+" "+ingredients[0]["Prix_ingre"]["tomates"]}€ <Button variant="outline-success" className="delete" onClick={async () => { await removeFromCart(index);await setCount(count - ingredients[0]["Prix_ingre"]["tomates"]);}}>Supprimer</Button></p>
       </div>
         ))}
       </div>

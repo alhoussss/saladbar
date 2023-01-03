@@ -25,9 +25,9 @@ const Footer = () => (
         </Col>
         <Col sm={3} className="mt-5 mt-sm-0">
           <h4 className="text-white">Suivez-nous</h4>
-          <li><a href="https://www.instagram.com/monprofil/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+          <li><a href="https://www.instagram.com/saladeverte.restaurante/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
 
-          <li><a href="https://www.pinterest.com/monprofil/" target="_blank"><i class="fab fa-pinterest fa-lg"></i></a></li>
+          <li><a href="https://www.pinterest.com/pin/454371049917845276/" target="_blank"><i class="fab fa-pinterest fa-lg"></i></a></li>
 
         </Col>
       </Row>

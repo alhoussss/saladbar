@@ -32,6 +32,7 @@ function NavScrollExample() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <h1 className='name'>SaladBar</h1>
           <Form className="d-flex">
             <Form.Control
               type="search"
