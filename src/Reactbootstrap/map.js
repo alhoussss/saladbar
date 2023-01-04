@@ -4,6 +4,7 @@ import NavScrollExample from './navbar';
 import Footer from './footer';
 
 
+
 const MapContainer = (props) => {
   const [address, setAddress] = useState('');
   const [coordinates, setCoordinates] = useState({});
@@ -26,6 +27,8 @@ const MapContainer = (props) => {
       }
     });
   };
+  
+
   
 
   return (
@@ -60,5 +63,5 @@ const MapContainer = (props) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyAnWMwdYldtncVQV6gbvS_hBoQyAUa_4wY',
+  apiKey: "AIzaSyAfvGH5h9Ec_q3UE5-CikW8HIdFypMAZ8Y",
 })(MapContainer);

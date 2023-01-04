@@ -11,6 +11,8 @@ import Button from 'react-bootstrap/Button';
 import Order from './Order.js';
 import Carte from './Reactbootstrap/Carte';
 import MapContainer from './Reactbootstrap/map.js';
+import NavScroll from './Reactbootstrap/connection';
+
 
 
 function App() {
@@ -68,7 +70,7 @@ function MenuCard(handlechange){
   return(
       <>
       <div id='nav'>
-          <NavScrollExample/>
+          <NavScroll/>
       </div>
       
           <div id="Card">
