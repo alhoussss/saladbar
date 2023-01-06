@@ -18,32 +18,35 @@
     "title": "Méli-mélo de crudités",
     "Prix_salade":12,
     "ingredients": ["Concombres, tomates, maïs, vinaigrette"],
+    "ingredient": ["Concombres","tomates","maïs","vinaigrette"],
     "Prix_ingre": {
       "Concombres": 1,
       "tomates": 1,
       "maïs": 1,
       "vinaigrette": 1
     },
-    "photo":"https://www.tatiemaryse.com/wp-content/uploads/2018/12/me%CC%81li-me%CC%81lo-crudite%CC%81s.jpg_"
+    "photo":"https://larecette.net/wp-content/uploads/2022/05/concept-of-healthy-food-clean-eating-dieting-colorful-fresh-vegetable-picture-id1250937480.jpg"
   },
   {
     "id":3,
     "title": "Panaché de crudités",
     "Prix_salade":15,
     "ingredients": ["Tomates, concombres, carottes râpées, vinaigrette"],
+    "ingredient": ["tomates","Concombres","carottes râpées","vinaigrette"],
     "Prix_ingre": {
       "Concombres": 1,
       "tomates": 1,
       "carottes râpées": 1,
       "vinaigrette": 1
     },
-    "photo":"https://cache.marieclaire.fr/data/photo/w1000_c17/cuisine/15z/saladeradissaumon.jpg_"
+    "photo":"http://image.over-blog.com/tkK9c5Dnm5wTlwRMzTNe2lWOwDQ=/filters:no_upscale()/image%2F0980383%2F20210328%2Fob_3da51f_anna-pelzer-igfigp5onv0-unsplash.jpg"
   },
   {
     "id":4,
     "title": "Crudités Bulgare",
     "Prix_salade":10,
     "ingredients": ["Carottes, céleri branche, courgettes, sauce bulgare"],
+    "ingredient": ["Carottes","céleri branche","courgettes","sauce bulgare"],
     "Prix_ingre": {
       "Carottes": 1,
       "céleri branche": 1,
@@ -56,6 +59,7 @@
     "title": "Salade Arc-en-ciel",
     "Prix_salade":15,
     "ingredients": ["Tomates, céleri branche, maïs, vinaigrette"],
+    "ingredient": ["Tomates","céleri branche","maïs","vinaigrette"],
     "Prix_ingre": {
       "Tomates": 1,
       "céleri branche": 1,
@@ -63,6 +67,31 @@
       "vinaigrette": 1
     },
     "photo":"https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/salade-arc-en-ciel-de-grenailles-lardons-ac37707e.jpg"
+  },
+  {
+    "title": "Expresso",
+    "Prix_salade":2,
+    "photo":"https://nomadbarista.com/wp-content/uploads/2019/12/espresso-ou-expresso.jpg"
+  },
+  {
+    "title": "Chocolat",
+    "Prix_salade":2,
+    "photo":"https://lavietrepidantedetwinsribbons.fr/wp-content/uploads/2013/01/1200x600-chocolat-chaud-traditionnel-1200x900.jpg"
+  },
+  {
+    "title": "Capuccino",
+    "Prix_salade":2,
+    "photo":"https://assets.afcdn.com/recipe/20160919/20976_w1024h1024c1cx2624cy1749.jpg"
+  },
+  {
+    "title": "Ice-Tea",
+    "Prix_salade":2,
+    "photo":"https://www.cookomix.com/wp-content/uploads/2022/07/ice-tea-menthe-citron-thermomix.jpg"
+  },
+  {
+    "title": "Jus d'orange",
+    "Prix_salade":3,
+    "photo":"https://www.instagrume.com/wp-content/uploads/2022/07/presser-orange-sans-presse-agrumes.jpg"
   }
 ]
   

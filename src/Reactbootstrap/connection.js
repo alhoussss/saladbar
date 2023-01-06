@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import App from '../App';
 import { useNavigate } from 'react-router-dom';
 
+
 function NavScroll() {
   let navigate = useNavigate();
   return (

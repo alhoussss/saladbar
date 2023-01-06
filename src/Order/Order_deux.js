@@ -1,15 +1,15 @@
 import React from "react";
-import "./App.css";
+import "../App.css";
 import { useState } from "react";
-import ingredients from "./ingredients.json";
+import ingredients from "../ingredients.json";
 import {useNavigate } from "react-router-dom";
-import NavScrollExample from "./Reactbootstrap/navbar";
-import Footer from "./Reactbootstrap/footer";
+import NavScrollExample from "../Reactbootstrap/navbar";
+import Footer from "../Reactbootstrap/footer";
 import { Button } from "react-bootstrap";
 
 
-function Order() {
-  const [count, setCount] = useState(ingredients[0].Prix_salade)
+function Order_deux() {
+  const [count, setCount] = useState(ingredients[2].Prix_salade)
   const [cart, setCart] = useState([]);
   //const [result, setResult] = useState('');
 
@@ -32,14 +32,6 @@ function Order() {
 function resetTodoList() {
   setCart([]);
 }
-// Affichage des ingrédients ajouter
-const [result, setResult] = useState('');
-
-const handleClick = () => {
-  const result = addToCart(ingredients[0]["ingredient"][0]);
-  setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]));
-  setResult(result);
-};
 
   return (
     <>
@@ -49,25 +41,25 @@ const handleClick = () => {
     <div id="nav">
       <div id="ingredients">    
         <div >
-          <h2>{ingredients && ingredients[0].title}</h2>
+          <h2>{ingredients && ingredients[2].title}</h2>
           <h3>Ingredients</h3>
-          <p>{ingredients && ingredients[0].ingredients}</p>
-          <img src={ingredients && ingredients[0].photo} alt="Salade" />
+          <p>{ingredients && ingredients[2].ingredients}</p>
+          <img src={ingredients && ingredients[2].photo} alt="Salade" />
         </div>
       </div>
       <div id="Order">
       <h3>Ajoutez des ingredients supplementaire:</h3>
-      <Button variant="outline-success" className="ingre" name="comcombre" onClick={handleClick}>comcombre</Button>
-      <Button variant="outline-success" className="ingre" name="tomates" onClick={() => {addToCart(ingredients[0]["ingredient"][1]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>tomates</Button>
-      <Button variant="outline-success" className="ingre" name="maïs" onClick={() => {addToCart(ingredients[0]["ingredient"][2]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>maïs</Button>
-      <Button variant="outline-success" className="ingre" name="vinaigrette" onClick={() => {addToCart(ingredients[0]["ingredient"][3]);setCount(count + parseInt(ingredients[0]["Prix_ingre"]["tomates"]))}}>vinaigrette</Button>
+      <Button variant="outline-success" className="ingre" name="comcombre" onClick={() => {addToCart(ingredients[2]["ingredient"][0]);setCount(count + parseInt(ingredients[1]["Prix_ingre"]["tomates"]))}}> tomates</Button>
+      <Button variant="outline-success" className="ingre" name="tomates" onClick={() => {addToCart(ingredients[2]["ingredient"][1]);setCount(count + parseInt(ingredients[1]["Prix_ingre"]["tomates"]))}}>Concombres</Button>
+      <Button variant="outline-success" className="ingre" name="maïs" onClick={() => {addToCart(ingredients[2]["ingredient"][2]);setCount(count + parseInt(ingredients[1]["Prix_ingre"]["tomates"]))}}>carottes râpées</Button>
+      <Button variant="outline-success" className="ingre" name="vinaigrette" onClick={() => {addToCart(ingredients[2]["ingredient"][3]);setCount(count + parseInt(ingredients[1]["Prix_ingre"]["tomates"]))}}>vinaigrette</Button>
       </div>
 
       <div id="Order">
         <h3>Ingredients supplementaire:</h3>
         {cart.map((ingredient, index) => (
           <div key={ingredient.id}>
-            <p>{ result}€ <Button variant="outline-success" className="delete" onClick={async () => { await removeFromCart(index);await setCount(count - ingredients[0]["Prix_ingre"]["tomates"]);}}>Supprimer</Button></p>
+            <p>{ ingredient + "  "}{ ingredients[0]["Prix_ingre"]["tomates"]}€ <Button variant="outline-success" className="delete" onClick={async () => { await removeFromCart(index);await setCount(count - ingredients[0]["Prix_ingre"]["tomates"]);}}>Supprimer</Button></p>
       </div>
         ))}
       </div>
@@ -86,4 +78,4 @@ const handleClick = () => {
   );
 }
 
-export default Order;
+export default Order_deux;
