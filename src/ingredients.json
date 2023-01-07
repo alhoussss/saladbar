@@ -92,6 +92,31 @@
     "title": "Jus d'orange",
     "Prix_salade":3,
     "photo":"https://www.instagrume.com/wp-content/uploads/2022/07/presser-orange-sans-presse-agrumes.jpg"
+  },
+  {
+    "title": "Macaron",
+    "Prix_salade":3,
+    "photo":"https://imgs.search.brave.com/1arjCg5sLpLq_gl_OC2A4UJsR2D-Uazo9gGsPc0A4G0/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vZXBpY3Vy/ZWFuZGN1bHR1cmUu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE0LzEyL01hY2Fy/b24tcGhvdG8tMy5q/cGc"
+  },
+  {
+    "title": "Île flottante",
+    "Prix_salade":6,
+    "photo":"https://imgs.search.brave.com/Kbk-x3MWHlGMbxE8LSMpLXB0NBPCiVd7DyjKV4d9TZo/rs:fit:1024:683:1/g:ce/aHR0cHM6Ly93d3cu/cmVjZXR0ZWF6Lm5l/dC93cC1jb250ZW50/L3VwbG9hZHMvMjAx/Ni8wNC9yZWNldHRl/LUlsZS1mbG90dGFu/dGUtMTAyNHg2ODMu/anBn"
+  },
+  {
+    "title": "mille-feuille",
+    "Prix_salade":5,
+    "photo":"https://imgs.search.brave.com/7wc40-80VJXIju_wRNLiTViAScHq_UZHKD6zGqCbmrM/rs:fit:1200:1200:1/g:ce/aHR0cDovL2Nkbi50/YXN0ZS5jb20uYXUv/aW1hZ2VzL3JlY2lw/ZXMvYWd0LzIwMDcv/MDEvMTU4NDguanBn"
+  },
+  {
+    "title": "Tarte au citron",
+    "Prix_salade":4,
+    "photo":"https://imgs.search.brave.com/PoQLvPuccS8tHA2uQ-zDZwYmSg6j1SgoGqRa12U8uQk/rs:fit:1200:1071:1/g:ce/aHR0cDovLzEuYnAu/YmxvZ3Nwb3QuY29t/Ly1TZTM3NEdic1RR/SS9VMUxKZ244bHlZ/SS9BQUFBQUFBQUFa/VS9rOWdrenNWMmZD/Zy9zMTYwMC9EU0Nf/MDYwNy5KUEc"
+  },
+  {
+    "title": "crème brûlée",
+    "Prix_salade":4,
+    "photo":"https://imgs.search.brave.com/I_PoQdPmhkVfbHb-k7GYw6C4D4Gz5EQaukXqANIzIVs/rs:fit:800:1200:1/g:ce/aHR0cHM6Ly90aGVz/dGF5YXRob21lY2hl/Zi5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjAvMDEvRWFz/eS1DbGFzc2ljLUNy/ZW1lLUJydWxlZS00/LmpwZw"
   }
 ]
   
