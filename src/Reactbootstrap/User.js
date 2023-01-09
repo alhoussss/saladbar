@@ -1,5 +1,4 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
 import { useState } from 'react';
 import '../App.css';
 import Button from 'react-bootstrap/Button';
@@ -38,6 +37,8 @@ const CreateUser = () => {
           id="name"
           value={name}
           onChange={(event) => setName(event.target.value)}
+          required
+          title="Veuillez remplir ce champ" // Ajout de la propriété title
         />
       </div>
       <div className="form-group">
@@ -49,6 +50,8 @@ const CreateUser = () => {
           id="firstname"
           value={firstname}
           onChange={(event) => setFirstname(event.target.value)}
+          required
+          title="Veuillez remplir ce champ" // Ajout de la propriété title
         />
       </div>
       <div className="form-group">
@@ -60,6 +63,8 @@ const CreateUser = () => {
           id="phone"
           value={phone}
           onChange={(event) => setPhone(event.target.value)}
+          required
+          title="Veuillez remplir ce champ" // Ajout de la propriété title
         />
       </div>
       <div className="form-group">
@@ -71,6 +76,8 @@ const CreateUser = () => {
           id="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
+          required
+          title="Veuillez remplir ce champ" // Ajout de la propriété title
         />
       </div>
       <Button variant="outline-success" className='ord' onClick={() =>navigate('/CreateUser/MenuCard')}>Start my order</Button>

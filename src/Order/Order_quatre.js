@@ -44,7 +44,7 @@ function resetTodoList() {
           <h2>{ingredients && ingredients[4].title}</h2>
           <h3>Ingredients</h3>
           <p>{ingredients && ingredients[4].ingredients}</p>
-          <img src={ingredients && ingredients[4].photo} alt="Salade" />
+          <img src={ingredients && ingredients[4].photo} alt="Salade" className="pictures" />
         </div>
       </div>
       <div id="Order">
@@ -69,7 +69,7 @@ function resetTodoList() {
       </div>
       <div id="invoice">
         <Button variant="outline-success" className="order" onClick={() => navigate('/CreateUser/MenuCard')}> Poursuivre votre commande</Button>
-        <Button variant="outline-success" className="order" onClick={resetTodoList} > Reset</Button>
+        <Button variant="outline-success" className="order" onClick={() => {resetTodoList();setCount(ingredients[4]["Prix_salade"])}} > Reset</Button>
         <Button variant="outline-success" className="order" onClick={() => navigate('/CreateUser/MenuCard/Order/Recap')}> Finaliser votre commande >></Button>
       </div>
       </div>

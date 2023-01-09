@@ -8,6 +8,7 @@ import Footer from "../Reactbootstrap/footer";
 import { Button } from "react-bootstrap";
 
 
+
 function Order_un() {
   const [count, setCount] = useState(ingredients[1].Prix_salade)
   const [cart, setCart] = useState([]);
@@ -44,7 +45,7 @@ function resetTodoList() {
           <h2>{ingredients && ingredients[1].title}</h2>
           <h3>Ingredients</h3>
           <p>{ingredients && ingredients[1].ingredients}</p>
-          <img src={ingredients && ingredients[1].photo} alt="Salade" />
+          <img src={ingredients && ingredients[1].photo} alt="Salade" className="pictures" />
         </div>
       </div>
       <div id="Order">
@@ -69,12 +70,13 @@ function resetTodoList() {
       </div>
       <div id="invoice">
         <Button variant="outline-success" className="order" onClick={() => navigate('/CreateUser/MenuCard')}> Poursuivre votre commande</Button>
-        <Button variant="outline-success" className="order" onClick={resetTodoList} > Reset</Button>
-        <Button variant="outline-success" className="order" onClick={() => navigate('/CreateUser/MenuCard/Order/Recap')}> Finaliser votre commande >></Button>
+        <Button variant="outline-success" className="order" onClick={() => {resetTodoList();setCount(ingredients[1]["Prix_salade"])}} > Reset</Button>
+        <Button variant="outline-success" className="order" onClick={() => navigate('/CreateUser/MenuCard/Order_un/Recap')}> Finaliser votre commande >></Button>
       </div>
       </div>
         <Footer/>
     </>
+    
   );
 }
 
