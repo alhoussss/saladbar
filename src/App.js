@@ -25,13 +25,15 @@ import Order_onze from './Order/Order_onze';
 import Order_douze from './Order/Order_douze';
 import Order_treize from './Order/Order_treize';
 import Order_quatorze from './Order/Order_quatorze';
+import { createContext } from 'react';
 
 
 
-
+const MyContext = createContext();
 function App() {
   return (
     <>
+    <MyContext.Provider>
       <div className="App">
     </div>
     <Routes>
@@ -42,24 +44,38 @@ function App() {
       <Route path="/MenuCard" element={<MenuCard/>} />
       <Route path="/CreateUser/MenuCard" element={<MenuCard/>} />
       <Route path='/CreateUser/MenuCard/Order' element={<Order/>}/>
+      <Route path='/CreateUser/MenuCard/Order/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_un' element={<Order_un/>}/>
       <Route path='/CreateUser/MenuCard/Order_deux' element={<Order_deux/>}/>
+      <Route path='/CreateUser/MenuCard/Order_deux/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_trois' element={<Order_trois/>}/>
+      <Route path='/CreateUser/MenuCard/Order_trois/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_quatre' element={<Order_quatre/>}/>
+      <Route path='/CreateUser/MenuCard/Order_quatre/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_cinq' element={<Order_cinq/>}/>
+      <Route path='/CreateUser/MenuCard/Order_cinq/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_six' element={<Order_six/>}/>
+      <Route path='/CreateUser/MenuCard/Order_six/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_sept' element={<Order_sept/>}/>
+      <Route path='/CreateUser/MenuCard/Order_sept/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_huit' element={<Order_huit/>}/>
+      <Route path='/CreateUser/MenuCard/Order_huit/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_neuf' element={<Order_neuf/>}/>
+      <Route path='/CreateUser/MenuCard/Order_neuf/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_dix' element={<Order_dix/>}/>
+      <Route path='/CreateUser/MenuCard/Order_dix/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_onze' element={<Order_onze/>}/>
+      <Route path='/CreateUser/MenuCard/Order_onze/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_douze' element={<Order_douze/>}/>
+      <Route path='/CreateUser/MenuCard/Order_douze/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_treize' element={<Order_treize/>}/>
+      <Route path='/CreateUser/MenuCard/Order_treize/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_quatorze' element={<Order_quatorze/>}/>
+      <Route path='/CreateUser/MenuCard/Order_quatorze/Recap' element={<Recap/>}/>
       <Route path='/CreateUser/MenuCard/Order_un/Recap' element={<Recap/>}/>
       
     </Routes>
-  
+    </MyContext.Provider>
     </>
 
   );

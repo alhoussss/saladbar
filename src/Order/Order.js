@@ -6,9 +6,12 @@ import {useNavigate } from "react-router-dom";
 import NavScrollExample from "../Reactbootstrap/navbar";
 import Footer from "../Reactbootstrap/footer";
 import { Button } from "react-bootstrap";
+import { createContext } from 'react';
 
+const MyContext = createContext();
 
 function Order(index) {
+ 
   const [count, setCount] = useState(ingredients[0].Prix_salade)
   const [cart, setCart] = useState([]);
   //const [result, setResult] = useState('');
@@ -35,6 +38,7 @@ function resetTodoList() {
 
   return (
     <>
+    <MyContext.Provider value={[count, setCount,cart,setCart]}>
     <div id="nav">
       <NavScrollExample/>
     </div>
@@ -74,6 +78,7 @@ function resetTodoList() {
       </div>
       </div>
         <Footer/>
+      </MyContext.Provider>
     </>
   );
 }
